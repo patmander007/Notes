@@ -1,0 +1,178 @@
+MapR Academy Notes
+ESS 100
+	Parallel processing paradigm - MapReduce
+		map() and reduce()
+	"Hadoop" name of elephant toy
+	Big Data Pipeline
+		Data Sources 		Data Ingestion 	Data Processing		Data Analysis
+						------------------------------Data Storage------------------------------
+	
+	-Admin
+		prepare for install
+		test performance
+		upgrade software
+		plan disaster recovery
+		configure security
+		add/remove users
+		skills:
+			cli
+			gui
+			hardware and software knowledge
+			proficient in several operating system
+		manage storage
+			physical storage
+				choose and install hardware
+				distribute data across racks or data centers
+			logical storage
+				organize data into topologies
+				grant users or groups access to data
+	-Developers
+		Design and develop code
+		deploy code
+		test code
+		maintain code
+		skills:
+			object-oriented programming languages
+			command line interface
+			functional or scripting programming language
+		write programs:
+			ingest data
+				developers write programs to ingest data
+				there are two types of data ingestion: streaming and batch
+				streaming data is resource intensive, but provides real-time results
+				batched data uses less resources and is great for historical data
+			process data
+				convert, clean, normalize
+	-Analysts and Scientists
+		analyzing data
+			business intelligence
+			machine learning and predictions
+			graphs and visualizatoins
+			info-graphics and presentations 
+		skills:
+			functional or scripting languages
+			presentation and graphic tools
+			statistics and subject specific knowledge
+			data modeling and prediction
+		analyze data
+			data analysts query and analyze data to gain insights
+			correlate several variables
+			predict future ends
+		present data
+			they must present their findings  in accessible ways
+		
+ESS 101
+	Lesson 3: Core Elements of Apache Hadoop
+		RAID - Redundant Array of Inexpensive Disks
+	Apache Hadoop
+		open-source framework for distributed storage/processing
+		built from commodity hardware
+		designed to tolerate failures
+		clustered systems/parallel systems
+		blocks are replicated 3 times by default
+	Terms
+		Logical topology - refers of how data is arrange in your file system
+		Physical topology - refers of how disks are arranged in racks
+		Permissions - refers to how has access to different parts of your file system
+		Compression - is the process of making a file smaller in size
+		Hard and soft quotas
+			a quota is the upper bound for disk space use
+			a hard quota prohibits additional writing
+			a soft quota sends an alert when reached
+		Replication - if your replication factor is three, HDFS will store the original file, plus two copies
+	MapReduce
+		Map - Data is logically split and a function produces key-value pairs
+		Shuffle - The key/value pairs are partition among the reducers
+		Reduce - a functions is applied to each of these partitions
+Lesson 4: The Apache Hadoop Ecosystem
+	Administration
+		Apache ZooKepper
+		MapReduce version
+		YARN version
+		
+		Apache ZooKeeper
+			coordinates other services
+				maintains configuration informatoin
+				monitors cluster heartbeats
+			runs on odd number of nodes
+				requires majority for tie-breakers
+			starts before other services
+		YARN
+			Yet Another Resource Negotiator
+			allows other applications to run on Hadoop
+	Ingestion
+		Flume
+		Oozie
+		Sqoop
+	
+		Flume
+			ingests data into hadoop cluster
+			commonly used with log files
+		Sqoop
+			transfers data between HDFS and external data stores
+			Can be used with RDBMS and NoSQL
+		Oozie
+			schedules workflows
+			manages multiple jobs
+
+	Processing
+		Spark
+		HBase
+		Pig
+		
+		Spark
+			iterative, in-memory jobs
+				cached and fault-tolerant
+			Written in Java, Scala, or Python
+		HBase
+			NoSQL database
+				capture large amounts of data
+				stores sparse data with inconsistent values
+				continuous data with read/write access
+			Written in Java
+		PIG
+			includes scripting language called Pig Latin
+			transform and analyze large datasets
+			write functions in Python, Java, JavaScript, and Ruby
+
+	Data Analysis
+		Hive
+		Drill
+		Mahout
+		
+		Hive
+			Stores data in HCatalog and Hive Metastore
+			Hive Query Language
+				sql-like query language
+			Uses MapReduce
+		Apache Drill
+			Structured, semi-structured, and unstructured data
+			Multiple data sources and data types
+			ANSI-SQL compliant
+		Apache Mahout
+			Clustering
+			Classificatoin
+			Collaborative filtering
+	Lesson 5 - Solving Big Data Problems with Apache Hadoop
+		Data Warehouse
+			a data warehouse is a centralized repository for data
+			DW store data from multiple sources, for multiple purposes in a structured format
+			Analysts can treat the DW as a single source
+		ETL
+			the data ingestion process usually involves three steps: extract, transform and load
+			each data source may require its own ETL script
+		
+		Retail Data Warehouse
+			Big Data in Retail
+				a large retail merchant wants to track product metadata as well as customer ratings and sentiment
+				product metadata may be stored in a structured or semi-structured format
+				social media sentiment data may be semi-structured or unstructured
+			Optimization
+				Product metadata may not change often
+				Social media data may update frequently
+				How do we build a scalable solution to handle this variety of data
+			Hadoop and Data Warehouse
+				
+	
+
+		
