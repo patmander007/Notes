@@ -172,7 +172,28 @@ Lesson 4: The Apache Hadoop Ecosystem
 				Social media data may update frequently
 				How do we build a scalable solution to handle this variety of data
 			Hadoop and Data Warehouse
+			
+			Machine Learning Algorithms
+				recommendation engines use complex machine learning algorithms
+				the most common algorithms are: classification, clustering, and collaborative filtering
+			
+			Classification
+				supervised machine learning that takes a set of known classes and learns how to classify new records based on that information
+				example: spam detection: "Pre-approved" and "$$$" and in the "spam" class
+			Clustering
+				Unsupervised machine learning that groups similar objects
+				Example: text categorization, such as sorting books into genres
+			Collaborative filtering 
+				compares preference data from different users to create a recommendation model
 				
-	
+			Build a Recommender
+				how do we know what to recommend?
+				we observe how customers interact with webpages: what they click, read, watch, and buy
+				we build a model based on patterns of user behavior
+			Recommender Data Pipeline
+				User behavior history data is split into two data sets: test and training
+				The data is used to train a collaborative filtering model
+				As more data is added, the algorithm loops, improving the recommendation accuracy
 
-		
+
+
