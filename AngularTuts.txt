@@ -1,0 +1,48 @@
+Angular JS
+
+Typescript
+	language that compiles to javascript
+	
+Structure of Angular Projects
+	e2e(end to end)
+		end to end tests
+	node_modules
+		store where 3rd party libraries application
+	src
+		actual source code of the application
+		app
+			has module and components
+		assets
+			static assets like image, icons
+		environments
+			config files
+		main.ts
+			starting point of the application
+
+webpack
+    build automation tool
+    HMR
+        Hot Module Replacement
+
+TypeScript Tuts
+    strong typing
+    object oriented features
+    compile-time errors
+    great tooling
+    -supserset of javascript codes
+    -transpile, converting typescript to javascript
+
+    tsc
+        -transcript compiler
+
+    declaring variables
+        let/var
+        let
+            block scope
+        var
+            scope is in nearest function
+    
+    Types
+        
+
+
