@@ -43,8 +43,6 @@ TypeScript Tuts
             scope is in nearest function
     
     Types
-        
-        safd
 
 
 
