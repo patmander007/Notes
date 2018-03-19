@@ -42,7 +42,7 @@ TypeScript Tuts
         var
             scope is in nearest function
     
-    Types
+    Typessdf
 
 
 
