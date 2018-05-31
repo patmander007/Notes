@@ -1,0 +1,177 @@
+Learn and Understand AngularJS
+
+Model, View, Whatever - MV*
+	Whatever, whatever works for you
+
+data or data-ng can be handled by angularjs
+
+Modules, Apps, and Controllers
+
+Dependency injection: giving a function an object.
+	rather than creating an object inside a function, you pass it to the function
+
+The Scope Service
+	binds the model to the view
+	$scope is an object
+	all angular services start with a dollar sign. $
+
+How does Angular do dependency injection
+	angular.injector().annotate(functionName)
+		will return an array of inputs
+	
+Javascript Arrays can contain functions
+
+Dependency Injection and Minification
+	minification - shrinking the size of files for faster download.
+		we normally add .min to the name of the file. so file.js becames file.min.js, so we can tell the difference.
+
+Scope and Interpolation
+	Interpolation
+		creating a string by combining strings and placeholders
+			'My name is'+ name -> is interpolated, and results in 'My name is Tony'
+			
+$timeout(function(){}, timeOutMilli)
+	trigger,
+	
+Directives and Two Way Data Binding
+	Directive:
+		An instruction to AngularJS to manipulate a piece of the DOM.
+			- this could be 'add a class', 'hide this', 'create this', etc.,
+	ng-model="<var name>"
+		used for two-way binding, automatically tied to $scope
+		
+Watchers and the Digest Loop
+	the thing that connects the model and view
+
+	The Javascript Event Loop
+		keypress, click, mouseover, change
+	
+	$scope.$watch(<var>, function(newValue, oldValue){
+	
+	});
+	a watcher, to track the changes or monitors the changes of <var>
+	
+	$scope.$apply(function(){
+	
+	});
+	tell angular to apply it's digest cycle, when using functions outside angular
+	
+Common Directives
+	
+	ng-if="<anything that returns true/false>"
+		completely removes or allows to exist the tag
+	
+	ng-show="<anything that returns true/false>"
+		adds a ng-hide if false, 
+	
+	ng-hide="<anything that returns true/false>"
+		adds a ng-hife if true
+	
+	ng-class="{json}"
+		{'alert-warning': jsExpression}
+		alert-warning class will be added to the class if jsExpression is true
+	
+	ng-repeat="x in collection"
+	
+	ng-click, ng-keypress, ng-keydown, ng-changed
+	
+	ng-clock
+		hides the element on the DOM until angular has worked on it
+	
+	go to angularjs.org, and api reference, and browse in directives
+	
+	
+JavaScript Aside: The XMLHttpRequest Object
+	native to the browser
+	
+External Data and $http
+	$http
+		.get, .success, .error, .post
+
+Angular Aside: Multiple Controllers, Multiple Views
+	$scope is unique per controller
+	
+JavaScript and HTML Aside: Single Page Apps and the Hash
+	
+Routing, Templates, and Controllers
+	ngRoute
+	$routeProvider
+	$routeParams
+	$location
+	ng-view
+	
+JavaScript and Angular Aside - Variable Names and Normalization
+	Normalize -  to make consistent to a standard
+		specifically we are dealing with 'text normalization', or making strings of text consistent to a standard
+
+Creating a custom Directive
+	myApp.directive('<directiveName>', function (){
+		return{
+			restrict: 'AECM',
+			template: '<template-here>',
+			replace: true/false
+		}	
+	})
+	
+	template
+		templateUrl
+	scopes
+		can be accessed also in the directive, but may be dangerous
+		can be also isolated, by having scope:{} property in the directive
+			for text: @
+			for two-way binding: =
+			for function: &
+			
+Understanding Compile
+	Compile and Link:
+		when building code, the compiler converts code to a lower-level language, then the linker generates a file the computer will actually interact with
+	compile in angularjs
+		compile: function(elem, attrs){
+			//some codes
+			return {
+				
+				pre: function(scope, element, attrs){
+				
+				},
+				
+				post: function(scope, element, attrs){
+					
+				}
+				
+			}
+		}
+			you can modify the html on the fly...
+		
+	link in angular js
+		link: function(scope, elements, attrs){
+		
+		
+		}
+	
+Understanding Transclusion
+	Transclusion
+		include one document inside another
+			place a copy of one document at a particular point inside another.
+	
+	<small ng-transclude></small>
+	<ng-transclude></ng-transclude>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
