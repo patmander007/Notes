@@ -196,5 +196,4 @@ Lesson 4: The Apache Hadoop Ecosystem
 				As more data is added, the algorithm loops, improving the recommendation accuracy
 
 
-
 Additional from A1
