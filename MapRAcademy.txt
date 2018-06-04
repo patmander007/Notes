@@ -195,3 +195,5 @@ Lesson 4: The Apache Hadoop Ecosystem
 				The data is used to train a collaborative filtering model
 				As more data is added, the algorithm loops, improving the recommendation accuracy
 
+
+Additional from A1
